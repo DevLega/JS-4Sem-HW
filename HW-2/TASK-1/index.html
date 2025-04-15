@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+      body {
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+                circle,
+                rgba(63, 94, 251, 1) 0%,
+                rgba(252, 70, 107, 1) 100%
+        );
+        margin-bottom: 100px;
+      }
+
+      .navigation__button {
+        width: 200px;
+        height: 50px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .navigation__button:hover {
+        transform: scale(1.03);
+      }
+
+      .slider {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .slider__input {
+        width: 100%;
+      }
+
+      .slider__image {
+        display: block;
+        margin: 20px auto;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+  <a class="nav__link" href="../index.html">
+    <button class="navigation__button">Back</button>
+  </a>
+
+  <hr>
+
+  <div class="slider">
+    <input type="range" min="1" max="100" value="50" class="slider__input" />
+    <img src="https://dogtowndogtraining.com/wp-content/uploads/2012/06/300x300-061-e1340955308953.jpg" class="slider__image" />
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js" type="module"></script>
+  </body>
+</html>
