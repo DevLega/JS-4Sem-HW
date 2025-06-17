@@ -1,47 +1,73 @@
 const input = document.getElementById("bookmarkInput")
 const button = document.getElementById("addBookmarkBtn")
 const list = document.getElementById("bookmarkList");
-const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
 
-function createBookmark(url) {
+function createBookmark(url, index) {
     const li = document.createElement('li');
-    li.textContent = url;
-    const btn = document.createElement('button')
-    btn.textContent = 'delete'
-    li.append(btn);
+    const span = document.createElement('span');
+    span.textContent = url;
+
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'редагувати';
+    editBtn.style.marginLeft = '10px';
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'видалити';
+    deleteBtn.classList.add('delete');
+
+    editBtn.addEventListener('click', () => editBookmark(index, span));
+    deleteBtn.addEventListener('click', () => deleteBookmark(index));
+
+    li.append(span, editBtn, deleteBtn);
     return li;
 }
 
 function addBookmark() {
-    const url = input.value;
-    if(!url) return;
+    const url = input.value.trim();
+    if (!url) return;
     bookmarks.push(url);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
-    list.append(createBookmark(url))
-    input.value = ''
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    list.append(createBookmark(url, bookmarks.length - 1));
+    input.value = '';
 }
 
 function renderBookmarks() {
-    bookmarks.forEach((url) => {
-        list.append(createBookmark(url))
-    })
+    list.innerHTML = '';
+    bookmarks.forEach((url, index) => {
+        list.append(createBookmark(url, index));
+    });
 }
 
-function deleteTask(event) {
-    if (event.target.tagName === 'BUTTON') {
-        const li = event.target.parentElement;
-        const url = li.firstChild.textContent;
-        const index = bookmarks.indexOf(url);
-
-        if (index > -1) {
-            bookmarks.splice(index, 1);
-            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-        }
-
-        li.remove();
-    }
+function deleteBookmark(index) {
+    bookmarks.splice(index, 1);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    renderBookmarks();
 }
 
-renderBookmarks()
-list.addEventListener('click', deleteTask)
-button.addEventListener('click', addBookmark)
+function editBookmark(index, spanElement) {
+    const currentValue = bookmarks[index];
+    const inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.value = currentValue;
+
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = 'зберегти';
+
+    const parent = spanElement.parentElement;
+    parent.insertBefore(inputField, spanElement);
+    parent.insertBefore(saveBtn, spanElement);
+    spanElement.remove();
+
+    saveBtn.addEventListener('click', () => {
+        const newValue = inputField.value.trim();
+        if (!newValue) return;
+
+        bookmarks[index] = newValue;
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        renderBookmarks();
+    });
+}
+
+renderBookmarks();
+button.addEventListener('click', addBookmark);
