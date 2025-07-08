@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <style>
+
+      body {
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+        margin-bottom: 100px;
+      }
+
+      .navigation__button {
+        width: 200px;
+        height: 50px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .navigation__button:hover {
+        transform: scale(1.03);
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 10px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+    </style>
+
+    <a class="nav__link" href="../index.html">
+      <button class="navigation__button">Back</button>
+    </a>
+
+    <hr>
+    
+  <div class="timer" id="timer-1">
+    <div class="field">
+      <span class="value" data-value="days">11</span>
+      <span class="label">Days</span>
+    </div>
+  
+    <div class="field">
+      <span class="value" data-value="hours">11</span>
+      <span class="label">Hours</span>
+    </div>
+  
+    <div class="field">
+      <span class="value" data-value="mins">11</span>
+      <span class="label">Minutes</span>
+    </div>
+  
+    <div class="field">
+      <span class="value" data-value="secs">11</span>
+      <span class="label">Seconds</span>
+    </div>
+  </div>
+    
+  </body>
+</html>
