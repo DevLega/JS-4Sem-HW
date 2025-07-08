@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <style>
+
+      body {
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+        margin-bottom: 100px;
+      }
+
+      .navigation__button {
+        width: 200px;
+        height: 50px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .navigation__button:hover {
+        transform: scale(1.03);
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 10px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #eef;
+      }
+
+      #game-area {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: #ddd;
+        border: 2px solid #555;
+        margin-top: 20px;
+      }
+
+      #target {
+        width: 50px;
+        height: 50px;
+        background-color: crimson;
+        position: absolute;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+
+    </style>
+
+    <a class="nav__link" href="../index.html">
+      <button class="navigation__button">Back</button>
+    </a>
+
+    <hr>
+    
+    <p>Очки: <span id="score">0</span></p>
+    <p>Час: <span id="time">30</span>с</p>
+    <div id="game-area">
+      <div id="target"></div>
+    </div>
+    
+  </body>
+</html>
