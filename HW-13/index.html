@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <style>
+
+      body {
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+                circle,
+                rgba(63, 94, 251, 1) 0%,
+                rgba(252, 70, 107, 1) 100%
+        );
+        margin-bottom: 100px;
+      }
+
+      .navigation__button {
+        width: 200px;
+        height: 50px;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: white;
+        font-family: "Afacad Flux", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .navigation__button:hover {
+        transform: scale(1.03);
+      }
+
+    </style>
+
+    <a class="nav__link" href="../index.html">
+      <button class="navigation__button">Back</button>
+    </a>
+
+    <hr>
+    
+    <a class="nav__link" href="TASK-1/index.html">
+      <button class="navigation__button">Task 1</button>
+    </a>
+
+    <a class="nav__link" href="TASK-2/index.html">
+      <button class="navigation__button">Task 2</button>
+    </a>
+
+    <a class="nav__link" href="TASK-3/index.html">
+      <button class="navigation__button">Task 3</button>
+    </a>
+    
+  </body>
+</html>
