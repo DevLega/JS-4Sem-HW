@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/BrightTheme.css" />
+    <script type="module" src="app.js" defer></script>
+  </head>
+
+  <body>
+    <style>
+
+      body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f9f9f9;
+      }
+
+      input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      ul#suggestions {
+        margin-top: 10px;
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .country-details {
+        margin-top: 40px;
+      }
+
+      .country-flag {
+        width: 200px;
+        margin-top: 20px;
+      }
+
+    </style>
+    
+    <input type="text" id="search" placeholder="Search country">
+
+    <div id="search-results">
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@pnotify/core/dist/PNotify.js"></script>
+
+  </body>
+</html>
