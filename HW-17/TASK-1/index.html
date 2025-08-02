@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: black;
+    }
+    #box {
+      border: black 1px solid;
+      border-radius: 10px;
+      position: relative;
+      margin: 0 auto;
+      padding: 20px;
+      width: 80%;
+      height: auto;
+      background-color: #f0f0f0;
+    }
+    #list {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+    }
+    body {
+      padding-top: 200px;
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <body>
+
+    <div id="box">
+      <h1>Editor's Choice</h1>
+      <ul id="list"></ul>
+      <button id="btn">Завантажити ще</button>
+    </div>
+    
+  <script src="app.js" type="module" defer></script>
+  </body>
+</html>
