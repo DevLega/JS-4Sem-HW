@@ -1,0 +1,101 @@
+{
+  "students": [
+    {
+      "name": "Ivan Petrenko",
+      "age": 16,
+      "course": "Web Development",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "email": "ivan.petrenko@example.com",
+      "isEnrolled": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Olha Kovalenko",
+      "age": 16,
+      "course": "Game Development",
+      "skills": [
+        "C#",
+        "Unity"
+      ],
+      "email": "olha.kovalenko@example.com",
+      "isEnrolled": true
+    },
+    {
+      "id": "3",
+      "name": "Dmytro Shevchenko",
+      "age": 14,
+      "course": "Mobile App Development",
+      "skills": [
+        "Java",
+        "Kotlin",
+        "Android Studio"
+      ],
+      "email": "dmytro.shevchenko@example.com",
+      "isEnrolled": false
+    },
+    {
+      "id": "4",
+      "name": "Anastasia Ivanova",
+      "age": 17,
+      "course": "Data Science",
+      "skills": [
+        "Python",
+        "Pandas",
+        "Machine Learning"
+      ],
+      "email": "anastasia.ivanova@example.com",
+      "isEnrolled": true
+    },
+    {
+      "id": "f17f",
+      "name": "Jimmy",
+      "age": 25,
+      "course": "Cybersecurity",
+      "skills": [
+        "Java"
+      ],
+      "email": "Jimmeer@example.com",
+      "isEnrolled": true
+    },
+    {
+      "id": "555a",
+      "name": "Jimmy Harmy",
+      "age": 25,
+      "course": "Cybersecurity app[f d",
+      "skills": [
+        "Cybersecurity",
+        "Java"
+      ],
+      "email": "Jimmeer@example.com",
+      "isEnrolled": true
+    },
+    {
+      "id": "5755",
+      "name": "Jimmy Harmy",
+      "age": 25,
+      "course": "Cybersecurity",
+      "skills": [
+        "Cybersecurity",
+        "Java"
+      ],
+      "email": "Jimmeer@example.com",
+      "isEnrolled": false
+    },
+    {
+      "name": "Jimmy Harmy",
+      "age": 26,
+      "course": "Cybersecurity",
+      "skills": [
+        "Cybersecurity"
+      ],
+      "email": "Jimmeer@example.com",
+      "isEnrolled": true,
+      "id": "dfb4"
+    }
+  ]
+}
